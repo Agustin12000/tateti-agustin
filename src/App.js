@@ -26,7 +26,6 @@ class App extends Component {
       ]
     this.checkeoDeLineas(tateti)
   }
-  //https://codepen.io/zdflower/pen/RgGeqy
   checkeoDeLineas(tateti) {
     for (let index = 0; index < tateti.length; index++) {
       const [a, b, c] = tateti[index];
@@ -48,6 +47,10 @@ class App extends Component {
           jugador: this.state.jugador === "X" ? "O" : "X"
         })
         this.Ganador()
+      }else{
+        this.setState({
+          ganador: this.state.jugador = "empate"
+        })
       }
     }
   }

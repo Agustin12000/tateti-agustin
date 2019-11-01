@@ -6,9 +6,11 @@ class Estado extends Component {
         this.props.setJugador(e)
     }
     renderHtml() {
-        if (this.props.ganador) {
+        if (this.props.ganador==="empate") {
+            return (<div className="text-player">Fue {this.props.ganador}</div>)
+        }else if (this.props.ganador) {
             return (<div className="text-player">El ganador es {this.props.ganador}</div>)
-        }else {
+        }else{
             return this.props.jugador ?
                 <div className="text-player">Es turno de {this.props.jugador}</div> :
                 <Jugador jugador={(e) => this.handleSetJugador(e)} />
