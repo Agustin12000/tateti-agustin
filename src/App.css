@@ -1,0 +1,111 @@
+body{
+  background-image: url("./Imagen/Fondo.jpg");
+}
+.box{
+  font-size: 160px;
+  text-align: center;
+  width: 160px;
+  height: 160px;
+  color: #fff;
+  -webkit-text-stroke: 5px black;
+  border: 3px ridge #fff;
+  display:  inline-block;
+  line-height: 160px;
+  border-radius: 10px;
+}
+.board{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 498px;
+  border-radius: 10px;
+  border: rgba(40, 40, 58, 0.493) 3px ridge;
+}
+.text{  
+  font-size: 25px;
+  color: black;
+  -webkit-text-stroke: 0.6px rgb(3, 155, 231);
+}
+.text-player{
+  font-size: 50px;
+  color: #fff;
+  -webkit-text-stroke: 2px black;
+}
+.tateti{
+  font-size: 80px;
+  color: #fff;
+  -webkit-text-stroke: 3px black;
+}
+.contenedor-grid {
+	width: 90%;
+	max-width: 1150px;
+  margin: 20px auto;
+	display: grid;
+	grid-gap: 35px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas: "header header header"
+                       "contenido contenido sidebar"
+                       "contenido contenido sidebar"
+}
+.contenedor-grid > div,
+.contenedor-grid .contenido,
+.contenedor-grid .sidebar,
+.contenedor-grid .header{ 
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+.contenedor-grid .contenido{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: contenido;
+  background: #4fe9e960;
+  border: rgba(40, 40, 58, 0.493) 3px ridge;
+}
+.contenedor-grid .sidebar{
+  background: #4fe9e960;
+  grid-area: sidebar;
+  border: rgba(40, 40, 58, 0.493) 3px ridge;
+}
+.contenedor-grid .header{
+  display: flex;
+  background: #4fe9e960;
+  align-items: center;
+  justify-content: center;
+  grid-area: header;
+  border: rgba(40, 40, 58, 0.493) 3px ridge;
+}
+.buttom {
+  background-image: -webkit-linear-gradient(top, rgb(3, 155, 231), rgb(0, 0, 0));
+  border-radius: 6px;
+  padding: 1px 1px;
+  margin: 5px;
+  border: rgba(40, 40, 58, 0.493) 3px ridge;
+  font-size: 15px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #fff;
+}
+.buttom:hover{
+  background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), rgb(3, 155, 231));
+}
+@media screen and (max-width: 768px){
+	.contenedor-grid {
+    grid-template-areas: "header header header"
+                         "sidebar sidebar sidebar"
+                         "contenido contenido contenido";
+  }
+  .board{
+    width: 270px;
+    border-radius: 5px;
+  }
+  .box{
+    font-size: 88px;
+    width: 88px;
+    height: 88px;
+    -webkit-text-stroke: 1px black;
+    border: 1px ridge #fff;
+    line-height: 88px;
+    border-radius: 5px;
+  }
+}
